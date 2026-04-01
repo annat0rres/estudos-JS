@@ -5,43 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <body>
     <div class="container">
         <div class="calc">
-            <section id="visual"></section>
+            <section id="visual">
+
+            </section>
             <section id="botoes">
                 <div id="linhaum">
-                    <button>C</button>
-                    <button>DEL</button>
-                    <button>%</button>
-                    <button>/</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="deleteLast()">DEL</button>
+                    <button onclick="MostrarnoDisplay('%')">%</button>
+                    <button id="divisao" onclick="MostrarnoDisplay('/')">/</button>
                 </div>
                 <div id="linhadois">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>*</button>
+                    <button onclick="MostrarnoDisplay('7')">7</button>
+                    <button onclick="MostrarnoDisplay('8')">8</button>
+                    <button onclick="MostrarnoDisplay('9')">9</button>
+                    <button id="multip" onclick="MostrarnoDisplay('*')">*</button>
                 </div>
                 <div id="linhatres">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>-</button>
+                    <button onclick="MostrarnoDisplay('4')">4</button>
+                    <button onclick="MostrarnoDisplay('5')">5</button>
+                    <button onclick="MostrarnoDisplay('6')">6</button>
+                    <button id="subt" onclick="MostrarnoDisplay('-')">-</button>
                 </div>
                 <div id="linhaquatro">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>+</button>
+                    <button onclick="MostrarnoDisplay('1')">1</button>
+                    <button onclick="MostrarnoDisplay('2')">2</button>
+                    <button onclick="MostrarnoDisplay('3')">3</button>
+                    <button id="adição" onclick="MostrarnoDisplay('+')">+</button>
                 </div>
                 <div id="linhacinco">
                     <button>.</button>
                     <button>0</button>
-                    <button id="igual">=</button>
+                    <button id="igual" onclick="Calcular()">=</button>
                 </div>
             </section>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
